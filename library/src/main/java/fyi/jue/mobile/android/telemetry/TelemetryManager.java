@@ -1,7 +1,7 @@
 package fyi.jue.mobile.android.telemetry;
 
 /**
- * Core VDMS Telemetry Manager
+ * Core Telemetry Manager
  */
 public class TelemetryManager {
     private static Telemetry telemetry;

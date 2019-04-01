@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Core VDMS Telemetry Implementation
+ * Core Telemetry Implementation
  */
 public final class Telemetry {
     private final TelemetryClient telemetryClient;
