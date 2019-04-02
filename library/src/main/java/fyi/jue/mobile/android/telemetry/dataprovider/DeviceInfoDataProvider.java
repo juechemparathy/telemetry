@@ -3,7 +3,7 @@ package fyi.jue.mobile.android.telemetry.dataprovider;
 import android.os.Build;
 import fyi.jue.mobile.android.telemetry.util.StringUtils;
 
-public class DeviceInfoDataProvider extends TelemetryDataProvider {
+public class DeviceInfoDataProvider extends TelemetryDataProvider<String> {
     private static final String FIELD_NAME = "device";
 
     public DeviceInfoDataProvider() {
@@ -11,7 +11,7 @@ public class DeviceInfoDataProvider extends TelemetryDataProvider {
     }
 
     @Override
-    public Object prepare() {
+    public String prepare() {
         return StringUtils.assertLength(getManufacturer(), 20) + '-' +  StringUtils.assertLength(getModel(),  20);
     }
 

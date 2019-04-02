@@ -7,7 +7,7 @@ import java.util.UUID;
 /**
  * A unique, randomly generated UUID for this client.
  */
-public class ClientIdDataProvider extends TelemetryDataProvider {
+public class ClientIdDataProvider extends TelemetryDataProvider<String> {
     private static final String FIELD_NAME = "clientId";
     private TelemetryConfig configuration;
     private String clientId;
@@ -19,7 +19,7 @@ public class ClientIdDataProvider extends TelemetryDataProvider {
     }
 
     @Override
-    public Object prepare() {
+    public String prepare() {
         if (clientId == null) {
             clientId = generateClientId(configuration);
         }

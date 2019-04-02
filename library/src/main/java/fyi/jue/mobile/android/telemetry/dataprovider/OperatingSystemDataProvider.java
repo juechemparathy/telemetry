@@ -1,6 +1,6 @@
 package fyi.jue.mobile.android.telemetry.dataprovider;
 
-public class OperatingSystemDataProvider extends TelemetryDataProvider {
+public class OperatingSystemDataProvider extends TelemetryDataProvider<String> {
     private static final String FIELD_NAME = "os";
     private static final String VALUE = "Android";
     public OperatingSystemDataProvider() {
@@ -8,7 +8,7 @@ public class OperatingSystemDataProvider extends TelemetryDataProvider {
     }
 
     @Override
-    public Object prepare() {
+    public String prepare() {
         return VALUE;
     }
 }

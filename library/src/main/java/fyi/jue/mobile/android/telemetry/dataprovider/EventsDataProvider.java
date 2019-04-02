@@ -6,7 +6,7 @@ import fyi.jue.mobile.android.telemetry.event.TelemetryEvent;
 /**
  * Measurements around the data that is passed as part of TelemetryEvent.
  */
-public class EventsDataProvider extends TelemetryDataProvider {
+public class EventsDataProvider extends TelemetryDataProvider<String> {
     private static final String FIELD_NAME = "event";
     private TelemetryConfig configuration;
     private TelemetryEvent telemetryEvent;
@@ -21,7 +21,7 @@ public class EventsDataProvider extends TelemetryDataProvider {
     }
 
     @Override
-    public Object prepare() {
+    public String prepare() {
         if (telemetryEvent == null) {
             throw new IllegalStateException("TelemetryEvent not set");
         }

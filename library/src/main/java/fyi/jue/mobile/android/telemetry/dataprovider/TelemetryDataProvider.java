@@ -1,6 +1,6 @@
 package fyi.jue.mobile.android.telemetry.dataprovider;
 
-public abstract class TelemetryDataProvider {
+public abstract class TelemetryDataProvider<T> {
     private final String fieldName;
 
     public TelemetryDataProvider(String fieldName) {
@@ -11,5 +11,5 @@ public abstract class TelemetryDataProvider {
         return fieldName;
     }
 
-    public abstract Object prepare();
+    public abstract T prepare();
 }

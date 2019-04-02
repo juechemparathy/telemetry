@@ -2,7 +2,7 @@ package fyi.jue.mobile.android.telemetry.dataprovider;
 
 import fyi.jue.mobile.android.telemetry.config.TelemetryConfig;
 
-public class TelemetryConfigurationDataProvider extends TelemetryDataProvider {
+public class TelemetryConfigurationDataProvider extends TelemetryDataProvider<String> {
     private static final String FIELD_NAME = "config";
     private TelemetryConfig configuration;
 
@@ -12,7 +12,7 @@ public class TelemetryConfigurationDataProvider extends TelemetryDataProvider {
     }
 
     @Override
-    public Object prepare() {
+    public String prepare() {
         return configuration.getAppName() + " - " +  configuration.getAppVersion();
     }
 }
